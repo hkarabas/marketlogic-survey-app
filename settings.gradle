@@ -1,0 +1,3 @@
+rootProject.name = 'marketlogic-survey-app'
+include 'common'
+

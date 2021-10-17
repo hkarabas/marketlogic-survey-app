@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.marketlogic'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven {
+        url = "https://jcenter.bintray.com"
+    }
+}
+
+dependencies {
+    compile "io.eventuate.client.java:eventuate-client-java-spring:$eventuateClientVersion"
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion")
+    compileOnly('org.projectlombok:lombok:1.18.22')
+    annotationProcessor('org.projectlombok:lombok:1.18.22')
+
+    testCompile 'junit:junit:4.12'
+}
+
