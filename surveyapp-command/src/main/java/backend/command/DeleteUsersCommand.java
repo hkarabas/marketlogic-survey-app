@@ -1,14 +1,16 @@
-package org.marketlogic.survey.common.event;
-
+package backend.command;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @Setter
 @Getter
 @NoArgsConstructor
-public class AnswerDeletedEvent implements  AnswerEvent {
-
+@AllArgsConstructor
+public class DeleteUsersCommand {
+    private List<String> Ids;
 }

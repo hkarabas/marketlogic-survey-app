@@ -1,5 +1,4 @@
-package org.marketlogic.survey.common.event;
-
+package backend.command;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +8,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-public class AnswerDeletedEvent implements  AnswerEvent {
-
+@AllArgsConstructor
+public class DeleteQuestionCommand implements  QuestionCommand{
+    private String questionId;
 }

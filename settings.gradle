@@ -1,3 +1,5 @@
-rootProject.name = 'marketlogic-survey-app'
 include 'common'
+include 'surveyapp-command'
+include 'test-utils'
+rootProject.name = 'marketlogic-survey-app'
 
