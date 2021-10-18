@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 @Builder
 public class SurveyDto {
 
+    private String id;
+
     private  String surveyName;
 
 }

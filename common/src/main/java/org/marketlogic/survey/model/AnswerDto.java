@@ -12,6 +12,8 @@ import lombok.NoArgsConstructor;
 @Builder
 public class AnswerDto {
 
+    private String id;
+
     private String questionId;
 
     private String answer_desc;

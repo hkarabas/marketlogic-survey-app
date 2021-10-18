@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserSurveyAnswerDto {
 
+    private String id;
+
     private String surveyId;
 
     private String answerId;
