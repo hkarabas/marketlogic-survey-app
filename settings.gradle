@@ -1,5 +1,5 @@
 include 'common'
 include 'surveyapp-command'
-include 'test-utils'
+include 'common-hateoas'
 rootProject.name = 'marketlogic-survey-app'
 

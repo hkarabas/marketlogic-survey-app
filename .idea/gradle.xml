@@ -10,8 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/common-hateoas" />
             <option value="$PROJECT_DIR$/surveyapp-command" />
-            <option value="$PROJECT_DIR$/test-utils" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -31,8 +31,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/common-hateoas" />
             <option value="$PROJECT_DIR$/surveyapp-command" />
-            <option value="$PROJECT_DIR$/test-utils" />
           </set>
         </option>
       </GradleProjectSettings>

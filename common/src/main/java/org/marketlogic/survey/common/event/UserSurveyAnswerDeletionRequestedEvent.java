@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@EventEntity(entity = "net.chrisrichardson.eventstore.examples.todolist.todoservice.backend.domain.TodoBulkDeleteAggregate")
+@EventEntity(entity = "org.marketlogic.surveyappcommand.backend.domain.UserSurveyAnswerBulkDeleteAggregate")
 public class UserSurveyAnswerDeletionRequestedEvent implements Event {
     private String userSurveyAnswerID;
 }

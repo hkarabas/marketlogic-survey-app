@@ -1,0 +1,4 @@
+net/chrisrichardson/eventstore/examples/todolist/hateoas/UserUpdateService.java
+ net.chrisrichardson.eventstore.examples.todolist.hateoas.UserUpdateService
+net/chrisrichardson/eventstore/examples/todolist/hateoas/SurveyHateoasController.java
+ net.chrisrichardson.eventstore.examples.todolist.hateoas.SurveyHateoasController
