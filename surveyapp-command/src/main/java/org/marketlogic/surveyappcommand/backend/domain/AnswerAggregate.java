@@ -3,19 +3,27 @@ package org.marketlogic.surveyappcommand.backend.domain;
 import io.eventuate.Event;
 import io.eventuate.EventUtil;
 import io.eventuate.ReflectiveMutableCommandProcessingAggregate;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.marketlogic.survey.common.event.*;
 import org.marketlogic.survey.model.AnswerDto;
 import org.marketlogic.surveyappcommand.backend.command.AnswerCommand;
 import org.marketlogic.surveyappcommand.backend.command.CreateAnswerCommand;
 import org.marketlogic.surveyappcommand.backend.command.DeleteAnswerCommand;
 import org.marketlogic.surveyappcommand.backend.command.UpdateAnswerCommand;
+import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 import java.util.List;
 
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Service
 public class AnswerAggregate extends ReflectiveMutableCommandProcessingAggregate<AnswerAggregate, AnswerCommand> {
     
-    private AnswerDto survey;
+    private AnswerDto answerDto;
     private boolean deleted;
 
     public List<Event> process(CreateAnswerCommand cmd) {

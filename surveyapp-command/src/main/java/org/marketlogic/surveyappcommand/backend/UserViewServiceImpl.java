@@ -12,6 +12,7 @@ import org.marketlogic.survey.model.User;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 
@@ -30,11 +31,8 @@ public class UserViewServiceImpl implements UserUpdateService {
 
     @Override
     public CompletableFuture<User> findById(String userId) {
-        User res = repository.findById(userId).get();
-        if (res != null) {
-            return CompletableFuture.completedFuture(res);
-        }
-        return CompletableFutureUtil.failedFuture(new EntityNotFoundException("No todo found for given id"));
+        Optional<User> userOptional = repository.findById(userId);
+        return userOptional.map(CompletableFuture::completedFuture).orElseGet(() -> CompletableFutureUtil.failedFuture(new EntityNotFoundException("No todo found for given id")));
     }
 
 }

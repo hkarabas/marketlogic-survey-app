@@ -1,4 +1,12 @@
-net/chrisrichardson/eventstore/examples/todolist/hateoas/UserUpdateService.java
- net.chrisrichardson.eventstore.examples.todolist.hateoas.UserUpdateService
-net/chrisrichardson/eventstore/examples/todolist/hateoas/SurveyHateoasController.java
- net.chrisrichardson.eventstore.examples.todolist.hateoas.SurveyHateoasController
+org/marketlogic/survey/hateoas/AnswerUpdateService.java
+ org.marketlogic.survey.hateoas.AnswerUpdateService
+org/marketlogic/survey/hateoas/SurveyUpdateService.java
+ org.marketlogic.survey.hateoas.SurveyUpdateService
+org/marketlogic/survey/hateoas/SurveyHateoasController.java
+ org.marketlogic.survey.hateoas.SurveyHateoasController
+org/marketlogic/survey/hateoas/UserUpdateService.java
+ org.marketlogic.survey.hateoas.UserUpdateService
+org/marketlogic/survey/hateoas/QuestionUpdateService.java
+ org.marketlogic.survey.hateoas.QuestionUpdateService
+org/marketlogic/survey/hateoas/UserSurveyAnswerUpdateService.java
+ org.marketlogic.survey.hateoas.UserSurveyAnswerUpdateService
