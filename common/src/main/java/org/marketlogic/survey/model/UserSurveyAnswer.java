@@ -9,23 +9,25 @@ import lombok.Setter;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "user_survey_answer")
 public class UserSurveyAnswer {
     @Id
     private String id;
 
-    @Column
+    @Column(name="survey_id")
     private String surveyId;
 
-    @Column
+    @Column(name="answer_id")
     private String answerId;
 
-    @Column
+    @Column(name = "user_id")
     private String userId;
 
     public UserSurveyAnswer(UserSurveyAnswerDto userSurveyAnswerDto) {

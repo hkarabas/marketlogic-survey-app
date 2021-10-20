@@ -20,7 +20,7 @@ public class Answer {
     @Id
     private String id;
 
-    @Column
+    @Column(name = "question_id")
     private String questionId;
 
     @Column

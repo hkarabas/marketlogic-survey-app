@@ -20,7 +20,7 @@ public class Question {
     @Id
     private String id;
 
-    @Column
+    @Column(name = "survey_id")
     private String surveyId;
 
     @Column

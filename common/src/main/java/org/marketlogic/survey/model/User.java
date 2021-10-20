@@ -19,7 +19,7 @@ public class User {
 
     @Id
     private String id;
-    @Column
+    @Column(name = "username")
     private String userName;
 
     public User(UserDto userDto) {

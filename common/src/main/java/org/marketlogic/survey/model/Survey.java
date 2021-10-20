@@ -18,7 +18,7 @@ public class Survey {
 
     @Id
     private String id;
-    @Column
+    @Column(name = "surveyname")
     private String surveyName;
 
     public Survey(SurveyDto surveyDto) {
