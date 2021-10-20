@@ -9,6 +9,6 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class DeleteUserSurveyAnswerCommand implements  UserSurveyAnswerCommand{
+public class DeleteUserSurveyAnswerCommand implements UserSurveyAnswerCommand {
     private String id;
 }

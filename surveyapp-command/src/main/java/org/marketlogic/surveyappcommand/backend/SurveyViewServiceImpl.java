@@ -7,9 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.marketlogic.survey.SurveyRepository;
 import org.marketlogic.survey.hateoas.SurveyUpdateService;
-import org.marketlogic.survey.hateoas.UserUpdateService;
 import org.marketlogic.survey.model.Survey;
-import org.marketlogic.survey.model.User;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;

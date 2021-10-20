@@ -23,7 +23,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Service
-public class UserSurveyAnswerAggregate  extends ReflectiveMutableCommandProcessingAggregate<UserSurveyAnswerAggregate, UserSurveyAnswerCommand> {
+public class UserSurveyAnswerAggregate extends ReflectiveMutableCommandProcessingAggregate<UserSurveyAnswerAggregate, UserSurveyAnswerCommand> {
     private UserSurveyAnswerDto userSurveyAnswerDto;
     private boolean deleted;
 

@@ -29,6 +29,6 @@ public class UserSurveyAnswerServiceImpl implements UserSurveyAnswerUpdateServic
     @Override
     public CompletableFuture<UserSurveyAnswer> findById(String userSurveyAnswerId) {
         Optional<UserSurveyAnswer> optionalUserSurveyAnswer = userSurveyAnswerRepository.findById(userSurveyAnswerId);
-        return optionalUserSurveyAnswer.map(CompletableFuture::completedFuture).orElseGet(()-> CompletableFutureUtil.failedFuture(new EntityNotFoundException("No todo found for given id")));
+        return optionalUserSurveyAnswer.map(CompletableFuture::completedFuture).orElseGet(() -> CompletableFutureUtil.failedFuture(new EntityNotFoundException("No todo found for given id")));
     }
 }

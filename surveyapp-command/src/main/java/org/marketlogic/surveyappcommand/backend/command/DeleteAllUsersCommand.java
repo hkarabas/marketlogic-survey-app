@@ -7,5 +7,5 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
-public class DeleteAllUsersCommand implements  UserCommand{
+public class DeleteAllUsersCommand implements UserCommand {
 }

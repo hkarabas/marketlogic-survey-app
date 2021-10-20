@@ -6,7 +6,9 @@ import io.eventuate.ReflectiveMutableCommandProcessingAggregate;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.marketlogic.survey.common.event.*;
+import org.marketlogic.survey.common.event.AnswerCreatedEvent;
+import org.marketlogic.survey.common.event.AnswerDeletedEvent;
+import org.marketlogic.survey.common.event.AnswerUpdatedEvent;
 import org.marketlogic.survey.model.AnswerDto;
 import org.marketlogic.surveyappcommand.backend.command.AnswerCommand;
 import org.marketlogic.surveyappcommand.backend.command.CreateAnswerCommand;
@@ -22,7 +24,7 @@ import java.util.List;
 @AllArgsConstructor
 @Service
 public class AnswerAggregate extends ReflectiveMutableCommandProcessingAggregate<AnswerAggregate, AnswerCommand> {
-    
+
     private AnswerDto answerDto;
     private boolean deleted;
 

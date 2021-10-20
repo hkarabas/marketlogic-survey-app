@@ -10,7 +10,7 @@ import org.marketlogic.survey.model.UserSurveyAnswerDto;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateUserSurveyAnswerCommand implements  UserSurveyAnswerCommand{
+public class CreateUserSurveyAnswerCommand implements UserSurveyAnswerCommand {
     private UserSurveyAnswerDto userSurveyAnswerDto;
 
 }

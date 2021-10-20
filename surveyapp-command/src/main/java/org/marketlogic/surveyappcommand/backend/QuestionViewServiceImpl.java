@@ -28,6 +28,6 @@ public class QuestionViewServiceImpl implements QuestionUpdateService {
 
     @Override
     public CompletableFuture<Question> findById(String questionId) {
-        return questionRepository.findById(questionId).map(CompletableFuture::completedFuture).orElseGet(()->CompletableFutureUtil.failedFuture(new EntityNotFoundException("No todo found for given id")));
+        return questionRepository.findById(questionId).map(CompletableFuture::completedFuture).orElseGet(() -> CompletableFutureUtil.failedFuture(new EntityNotFoundException("No todo found for given id")));
     }
 }

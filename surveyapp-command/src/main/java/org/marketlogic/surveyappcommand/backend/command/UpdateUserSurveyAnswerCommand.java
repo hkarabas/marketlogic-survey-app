@@ -11,7 +11,7 @@ import org.marketlogic.survey.model.UserSurveyAnswerDto;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateUserSurveyAnswerCommand implements  UserSurveyAnswerCommand{
+public class UpdateUserSurveyAnswerCommand implements UserSurveyAnswerCommand {
     private String id;
     private UserSurveyAnswerDto userSurveyAnswerDto;
 }

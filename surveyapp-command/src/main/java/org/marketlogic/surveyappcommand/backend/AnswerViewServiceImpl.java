@@ -28,6 +28,6 @@ public class AnswerViewServiceImpl implements AnswerUpdateService {
 
     @Override
     public CompletableFuture<Answer> findById(String answerId) {
-        return answerRepository.findById(answerId).map(CompletableFuture::completedFuture).orElseGet(()-> CompletableFutureUtil.failedFuture(new EntityNotFoundException("No todo found for given id")));
+        return answerRepository.findById(answerId).map(CompletableFuture::completedFuture).orElseGet(() -> CompletableFutureUtil.failedFuture(new EntityNotFoundException("No todo found for given id")));
     }
 }

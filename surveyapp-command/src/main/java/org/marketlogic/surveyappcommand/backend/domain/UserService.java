@@ -20,7 +20,7 @@ import java.util.concurrent.CompletableFuture;
 @Service
 public class UserService {
 
-    private  AggregateRepository<UserAggregate, UserCommand> aggregateRepository;
+    private AggregateRepository<UserAggregate, UserCommand> aggregateRepository;
 
     private AggregateRepository<UserBulkDeleteAggregate, UserCommand> bulkDeleteAggregateRepository;
 

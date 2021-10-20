@@ -10,7 +10,7 @@ import org.marketlogic.survey.model.QuestionDto;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateQuestionCommand implements  QuestionCommand{
+public class UpdateQuestionCommand implements QuestionCommand {
     private String id;
     private QuestionDto questionDto;
 }

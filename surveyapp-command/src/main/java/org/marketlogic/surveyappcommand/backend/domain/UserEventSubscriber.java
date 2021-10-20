@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 public class UserEventSubscriber {
 
     @EventHandlerMethod
-    public CompletableFuture<EntityWithIdAndVersion<UserAggregate>> deleteUser(EventHandlerContext<UserDeletionRequestedEvent> ctx)  {
+    public CompletableFuture<EntityWithIdAndVersion<UserAggregate>> deleteUser(EventHandlerContext<UserDeletionRequestedEvent> ctx) {
         String userId = ctx.getEvent().getUserId();
         return ctx.update(UserAggregate.class, userId, new DeleteUserCommand());
     }

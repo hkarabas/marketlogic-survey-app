@@ -7,7 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.marketlogic.survey.model.QuestionDto;
-import org.marketlogic.survey.model.SurveyDto;
 import org.marketlogic.surveyappcommand.backend.command.*;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,5 @@
 package org.marketlogic.surveyappcommand.backend.command;
 
-import io.eventuate.Command;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

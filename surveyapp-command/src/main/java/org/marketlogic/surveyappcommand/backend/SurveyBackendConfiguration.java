@@ -21,146 +21,145 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 @EnableEventHandlers
 public class SurveyBackendConfiguration {
 
-  @Bean
-  public UserEventSubscriber userEventSubscriber() {
-    return new UserEventSubscriber();
-  }
+    @Bean
+    public UserEventSubscriber userEventSubscriber() {
+        return new UserEventSubscriber();
+    }
 
-  @Bean
-  public AggregateRepository<UserAggregate, UserCommand> aggregateUserRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(UserAggregate.class, eventStore);
-  }
+    @Bean
+    public AggregateRepository<UserAggregate, UserCommand> aggregateUserRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(UserAggregate.class, eventStore);
+    }
 
-  @Bean
-  public AggregateRepository<UserBulkDeleteAggregate, UserCommand> bulkDeleteAggregateRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(UserBulkDeleteAggregate.class, eventStore);
-  }
+    @Bean
+    public AggregateRepository<UserBulkDeleteAggregate, UserCommand> bulkDeleteAggregateRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(UserBulkDeleteAggregate.class, eventStore);
+    }
 
-  @Bean
-  public UserService updateUserService(AggregateRepository<UserAggregate, UserCommand> aggregateRepository, AggregateRepository<UserBulkDeleteAggregate, UserCommand> bulkDeleteAggregateRepository) {
-    return new UserService(aggregateRepository, bulkDeleteAggregateRepository);
-  }
+    @Bean
+    public UserService updateUserService(AggregateRepository<UserAggregate, UserCommand> aggregateRepository, AggregateRepository<UserBulkDeleteAggregate, UserCommand> bulkDeleteAggregateRepository) {
+        return new UserService(aggregateRepository, bulkDeleteAggregateRepository);
+    }
 
-  @Bean
-  public UserViewServiceImpl commandUserService(UserRepository repository) {
-    return new UserViewServiceImpl(repository);
-  }
-  /*-------survey-------*/
-  @Bean
-  public SurveyEventSubscriber surveyEventSubscriber() {
-    return new SurveyEventSubscriber();
-  }
+    @Bean
+    public UserViewServiceImpl commandUserService(UserRepository repository) {
+        return new UserViewServiceImpl(repository);
+    }
 
-  @Bean
-  public AggregateRepository<SurveyAggregate, SurveyCommand> aggregateSurveyRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(SurveyAggregate.class, eventStore);
-  }
+    /*-------survey-------*/
+    @Bean
+    public SurveyEventSubscriber surveyEventSubscriber() {
+        return new SurveyEventSubscriber();
+    }
 
-  @Bean
-  public AggregateRepository<SurveyBulkDeleteAggregate,SurveyCommand> bulkSurveyDeleteAggregateRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(SurveyBulkDeleteAggregate.class, eventStore);
-  }
+    @Bean
+    public AggregateRepository<SurveyAggregate, SurveyCommand> aggregateSurveyRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(SurveyAggregate.class, eventStore);
+    }
 
-  @Bean
-  public SurveyService updateSurveyService(AggregateRepository<SurveyAggregate, SurveyCommand> aggregateRepository, AggregateRepository<SurveyBulkDeleteAggregate, SurveyCommand> bulkSurveyDeleteAggregateRepository) {
-    return new SurveyService(aggregateRepository, bulkSurveyDeleteAggregateRepository);
-  }
+    @Bean
+    public AggregateRepository<SurveyBulkDeleteAggregate, SurveyCommand> bulkSurveyDeleteAggregateRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(SurveyBulkDeleteAggregate.class, eventStore);
+    }
 
-  @Bean
-  public SurveyViewServiceImpl commandSurveyService(SurveyRepository repository) {
-    return new SurveyViewServiceImpl(repository);
-  }
-  /*********UserSurveyAnswer************/
-  @Bean
-  public UserSurveyAnswerEventSubscriber userSurveyAnswerEventSubscriber() {
-    return new UserSurveyAnswerEventSubscriber();
-  }
+    @Bean
+    public SurveyService updateSurveyService(AggregateRepository<SurveyAggregate, SurveyCommand> aggregateRepository, AggregateRepository<SurveyBulkDeleteAggregate, SurveyCommand> bulkSurveyDeleteAggregateRepository) {
+        return new SurveyService(aggregateRepository, bulkSurveyDeleteAggregateRepository);
+    }
 
-  @Bean
-  public AggregateRepository<UserSurveyAnswerAggregate, UserSurveyAnswerCommand> aggregateUserSurveyAnswerRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(UserSurveyAnswerAggregate.class, eventStore);
-  }
+    @Bean
+    public SurveyViewServiceImpl commandSurveyService(SurveyRepository repository) {
+        return new SurveyViewServiceImpl(repository);
+    }
 
-  @Bean
-  public AggregateRepository<UserSurveyAnswerBulkDeleteAggregate,UserSurveyAnswerCommand> bulkUserSurveyAnswerDeleteAggregateRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(UserSurveyAnswerBulkDeleteAggregate.class, eventStore);
-  }
+    /*********UserSurveyAnswer************/
+    @Bean
+    public UserSurveyAnswerEventSubscriber userSurveyAnswerEventSubscriber() {
+        return new UserSurveyAnswerEventSubscriber();
+    }
 
-  @Bean
-  public UserSurveyAnswerService updateUserSurveyAnswerService(AggregateRepository<UserSurveyAnswerAggregate, UserSurveyAnswerCommand> aggregateRepository,
-                                                               AggregateRepository<UserSurveyAnswerBulkDeleteAggregate, UserSurveyAnswerCommand> bulkUserSurveyAnswerDeleteAggregateRepository) {
-    return new UserSurveyAnswerService(aggregateRepository, bulkUserSurveyAnswerDeleteAggregateRepository);
-  }
+    @Bean
+    public AggregateRepository<UserSurveyAnswerAggregate, UserSurveyAnswerCommand> aggregateUserSurveyAnswerRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(UserSurveyAnswerAggregate.class, eventStore);
+    }
 
-  @Bean
-  public UserSurveyAnswerServiceImpl commandUserSurveyAnswerService(UserSurveyAnswerRepository repository) {
-    return new UserSurveyAnswerServiceImpl(repository);
-  }
+    @Bean
+    public AggregateRepository<UserSurveyAnswerBulkDeleteAggregate, UserSurveyAnswerCommand> bulkUserSurveyAnswerDeleteAggregateRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(UserSurveyAnswerBulkDeleteAggregate.class, eventStore);
+    }
 
-  /***********Question**********/
+    @Bean
+    public UserSurveyAnswerService updateUserSurveyAnswerService(AggregateRepository<UserSurveyAnswerAggregate, UserSurveyAnswerCommand> aggregateRepository,
+                                                                 AggregateRepository<UserSurveyAnswerBulkDeleteAggregate, UserSurveyAnswerCommand> bulkUserSurveyAnswerDeleteAggregateRepository) {
+        return new UserSurveyAnswerService(aggregateRepository, bulkUserSurveyAnswerDeleteAggregateRepository);
+    }
 
-  @Bean
-  public QuestionEventSubscriber questionEventSubscriber() {
-    return new QuestionEventSubscriber();
-  }
+    @Bean
+    public UserSurveyAnswerServiceImpl commandUserSurveyAnswerService(UserSurveyAnswerRepository repository) {
+        return new UserSurveyAnswerServiceImpl(repository);
+    }
 
-  @Bean
-  public AggregateRepository<QuestionAggregate, QuestionCommand> aggregateQuestionRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(QuestionAggregate.class, eventStore);
-  }
+    /***********Question**********/
 
-  @Bean
-  public AggregateRepository<QuestionBulkDeleteAggregate,QuestionCommand> bulkQuestionDeleteAggregateRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(QuestionBulkDeleteAggregate.class, eventStore);
-  }
+    @Bean
+    public QuestionEventSubscriber questionEventSubscriber() {
+        return new QuestionEventSubscriber();
+    }
 
-  @Bean
-  public QuestionService updateQuestionService(AggregateRepository<QuestionAggregate, QuestionCommand> aggregateRepository,
-                                                               AggregateRepository<QuestionBulkDeleteAggregate, QuestionCommand> bulkQuestionDeleteAggregateRepository) {
-    return new QuestionService(aggregateRepository, bulkQuestionDeleteAggregateRepository);
-  }
+    @Bean
+    public AggregateRepository<QuestionAggregate, QuestionCommand> aggregateQuestionRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(QuestionAggregate.class, eventStore);
+    }
 
-  @Bean
-  public QuestionViewServiceImpl commandQuestionService(QuestionRepository repository) {
-    return new QuestionViewServiceImpl(repository);
-  }
+    @Bean
+    public AggregateRepository<QuestionBulkDeleteAggregate, QuestionCommand> bulkQuestionDeleteAggregateRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(QuestionBulkDeleteAggregate.class, eventStore);
+    }
 
-  /*************Answer****************************/
-  @Bean
-  public AnswerEventSubscriber EventSubscriber() {
-    return new AnswerEventSubscriber();
-  }
+    @Bean
+    public QuestionService updateQuestionService(AggregateRepository<QuestionAggregate, QuestionCommand> aggregateRepository,
+                                                 AggregateRepository<QuestionBulkDeleteAggregate, QuestionCommand> bulkQuestionDeleteAggregateRepository) {
+        return new QuestionService(aggregateRepository, bulkQuestionDeleteAggregateRepository);
+    }
 
-  @Bean
-  public AggregateRepository<AnswerAggregate, AnswerCommand> aggregateAnswerRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(AnswerAggregate.class, eventStore);
-  }
+    @Bean
+    public QuestionViewServiceImpl commandQuestionService(QuestionRepository repository) {
+        return new QuestionViewServiceImpl(repository);
+    }
 
-  @Bean
-  public AggregateRepository<AnswerBulkDeleteAggregate,AnswerCommand> bulkAnswerDeleteAggregateRepository(EventuateAggregateStore eventStore) {
-    return new AggregateRepository<>(AnswerBulkDeleteAggregate.class, eventStore);
-  }
+    /*************Answer****************************/
+    @Bean
+    public AnswerEventSubscriber EventSubscriber() {
+        return new AnswerEventSubscriber();
+    }
 
-  @Bean
-  public AnswerService updateAnswerService(AggregateRepository<AnswerAggregate, AnswerCommand> aggregateRepository,
-                                               AggregateRepository<AnswerBulkDeleteAggregate, AnswerCommand> bulkAnswerDeleteAggregateRepository) {
-    return new AnswerService(aggregateRepository, bulkAnswerDeleteAggregateRepository);
-  }
+    @Bean
+    public AggregateRepository<AnswerAggregate, AnswerCommand> aggregateAnswerRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(AnswerAggregate.class, eventStore);
+    }
 
-  @Bean
-  public AnswerViewServiceImpl commandAnswerService(AnswerRepository repository) {
-    return new AnswerViewServiceImpl(repository);
-  }
+    @Bean
+    public AggregateRepository<AnswerBulkDeleteAggregate, AnswerCommand> bulkAnswerDeleteAggregateRepository(EventuateAggregateStore eventStore) {
+        return new AggregateRepository<>(AnswerBulkDeleteAggregate.class, eventStore);
+    }
+
+    @Bean
+    public AnswerService updateAnswerService(AggregateRepository<AnswerAggregate, AnswerCommand> aggregateRepository,
+                                             AggregateRepository<AnswerBulkDeleteAggregate, AnswerCommand> bulkAnswerDeleteAggregateRepository) {
+        return new AnswerService(aggregateRepository, bulkAnswerDeleteAggregateRepository);
+    }
+
+    @Bean
+    public AnswerViewServiceImpl commandAnswerService(AnswerRepository repository) {
+        return new AnswerViewServiceImpl(repository);
+    }
 
 
-
-
-
-  @Bean
-  public HttpMessageConverters customConverters() {
-    HttpMessageConverter<?> additional = new MappingJackson2HttpMessageConverter();
-    return new HttpMessageConverters(additional);
-  }
+    @Bean
+    public HttpMessageConverters customConverters() {
+        HttpMessageConverter<?> additional = new MappingJackson2HttpMessageConverter();
+        return new HttpMessageConverters(additional);
+    }
 }
 
 

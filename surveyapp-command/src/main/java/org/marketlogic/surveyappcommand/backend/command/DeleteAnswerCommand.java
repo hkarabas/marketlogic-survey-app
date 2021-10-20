@@ -10,5 +10,5 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DeleteAnswerCommand implements AnswerCommand {
-  private String answerId;
+    private String answerId;
 }

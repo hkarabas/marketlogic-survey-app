@@ -9,6 +9,6 @@ import lombok.Setter;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class DeleteUserCommand implements UserCommand{
+public class DeleteUserCommand implements UserCommand {
     private String userId;
 }

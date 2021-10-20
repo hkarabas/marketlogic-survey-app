@@ -3,8 +3,6 @@ package org.marketlogic.surveyappcommand.backend.controller;
 import org.marketlogic.survey.common.controller.BaseController;
 import org.marketlogic.survey.common.model.ResourceWithUrl;
 import org.marketlogic.survey.hateoas.SurveyHateoasController;
-import org.marketlogic.survey.model.User;
-import org.marketlogic.survey.model.UserDto;
 import org.marketlogic.survey.model.UserSurveyAnswer;
 import org.marketlogic.survey.model.UserSurveyAnswerDto;
 import org.marketlogic.surveyappcommand.backend.UserSurveyAnswerServiceImpl;

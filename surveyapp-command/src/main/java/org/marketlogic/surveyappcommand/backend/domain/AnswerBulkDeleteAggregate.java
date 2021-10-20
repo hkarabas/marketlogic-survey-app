@@ -3,7 +3,6 @@ package org.marketlogic.surveyappcommand.backend.domain;
 import io.eventuate.Event;
 import io.eventuate.ReflectiveMutableCommandProcessingAggregate;
 import org.marketlogic.survey.common.event.AnswerDeletionRequestedEvent;
-import org.marketlogic.survey.common.event.QuestionDeletionRequestedEvent;
 import org.marketlogic.surveyappcommand.backend.command.AnswerCommand;
 import org.marketlogic.surveyappcommand.backend.command.DeleteAnswersCommand;
 
