@@ -34,8 +34,8 @@ public class AnswerController extends BaseController {
         return answerService.save(AnswerDto).thenApply(e -> withRequestAttributeContext(request, () -> toResource(e.getAggregate().getAnswerDto(), e.getEntityId())));
     }
 
-    @DeleteMapping(value = "/{survey-id}")
-    public CompletableFuture<ResourceWithUrl> deleteOneAnswer(@PathVariable("survey-id") String id, HttpServletRequest request) {
+    @DeleteMapping(value = "/{answer-id}")
+    public CompletableFuture<ResourceWithUrl> deleteOneAnswer(@PathVariable("answer-id") String id, HttpServletRequest request) {
         return answerService.remove(id)
                 .thenApply(e -> withRequestAttributeContext(request, () -> toResource(e.getAggregate().getAnswerDto(), e.getEntityId())));
     }
