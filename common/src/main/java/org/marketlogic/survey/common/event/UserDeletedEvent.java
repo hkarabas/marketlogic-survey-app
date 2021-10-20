@@ -1,6 +1,5 @@
 package org.marketlogic.survey.common.event;
 
-import io.eventuate.EventEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

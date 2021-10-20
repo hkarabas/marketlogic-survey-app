@@ -11,7 +11,7 @@ import org.marketlogic.surveyappcommand.backend.command.DeleteAnswerCommand;
 import java.util.concurrent.CompletableFuture;
 
 @EventSubscriber(id = "answerCommandSideEventHandlers")
-public class AnswerEventSubscriber {
+public class AnswerCommandEventSubscriber {
 
     @EventHandlerMethod
     public CompletableFuture<EntityWithIdAndVersion<AnswerAggregate>> deleteUser(EventHandlerContext<AnswerDeletionRequestedEvent> ctx) {

@@ -14,5 +14,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @EventEntity(entity = "org.marketlogic.surveyappcommand.backend.domain.AnswerDeletionRequestedEvent")
 public class AnswerDeletionRequestedEvent implements Event {
-    private String  answerId;
+    private String answerId;
 }

@@ -11,6 +11,6 @@ import org.marketlogic.survey.model.UserSurveyAnswerDto;
 @AllArgsConstructor
 @Getter
 @Setter
-public class UserSurveyAnswerDeletedEvent {
+public class UserSurveyAnswerDeletedEvent implements UserSurveyAnswerEvent {
     private UserSurveyAnswerDto userSurveyAnswerDto;
 }

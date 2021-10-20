@@ -8,7 +8,7 @@ import java.util.concurrent.CompletableFuture;
 
 public interface UserUpdateService {
 
-   public List<User> getAll();
+    public List<User> getAll();
 
-   public CompletableFuture<User> findById(String userId);
+    public CompletableFuture<User> findById(String userId);
 }

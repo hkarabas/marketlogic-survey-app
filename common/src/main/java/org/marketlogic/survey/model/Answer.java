@@ -18,7 +18,7 @@ import javax.persistence.Id;
 public class Answer {
 
     @Id
-    private  String id;
+    private String id;
 
     @Column
     private String questionId;

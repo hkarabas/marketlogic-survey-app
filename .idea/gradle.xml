@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/common-hateoas" />
             <option value="$PROJECT_DIR$/surveyapp-command" />
+            <option value="$PROJECT_DIR$/surveyapp-query" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -33,6 +34,20 @@
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/common-hateoas" />
             <option value="$PROJECT_DIR$/surveyapp-command" />
+            <option value="$PROJECT_DIR$/surveyapp-query" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/surveyapp-query" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/common-hateoas" />
+            <option value="$PROJECT_DIR$/surveyapp-command" />
+            <option value="$PROJECT_DIR$/surveyapp-query" />
           </set>
         </option>
       </GradleProjectSettings>

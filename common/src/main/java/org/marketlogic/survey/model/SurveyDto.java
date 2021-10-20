@@ -13,6 +13,6 @@ public class SurveyDto {
 
     private String id;
 
-    private  String surveyName;
+    private String surveyName;
 
 }

@@ -19,11 +19,11 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 @EntityScan("org.marketlogic.survey")
 @EnableJpaRepositories("org.marketlogic.survey")
 @EnableEventHandlers
-public class SurveyBackendConfiguration {
+public class SurveyCommandBackendConfiguration {
 
     @Bean
-    public UserEventSubscriber userEventSubscriber() {
-        return new UserEventSubscriber();
+    public UserCommandEventSubscriber userEventSubscriber() {
+        return new UserCommandEventSubscriber();
     }
 
     @Bean
@@ -48,8 +48,8 @@ public class SurveyBackendConfiguration {
 
     /*-------survey-------*/
     @Bean
-    public SurveyEventSubscriber surveyEventSubscriber() {
-        return new SurveyEventSubscriber();
+    public SurveyCommandEventSubscriber surveyEventSubscriber() {
+        return new SurveyCommandEventSubscriber();
     }
 
     @Bean
@@ -74,8 +74,8 @@ public class SurveyBackendConfiguration {
 
     /*********UserSurveyAnswer************/
     @Bean
-    public UserSurveyAnswerEventSubscriber userSurveyAnswerEventSubscriber() {
-        return new UserSurveyAnswerEventSubscriber();
+    public UserCommandSurveyAnswerEventSubscriber userSurveyAnswerEventSubscriber() {
+        return new UserCommandSurveyAnswerEventSubscriber();
     }
 
     @Bean
@@ -102,8 +102,8 @@ public class SurveyBackendConfiguration {
     /***********Question**********/
 
     @Bean
-    public QuestionEventSubscriber questionEventSubscriber() {
-        return new QuestionEventSubscriber();
+    public QuestionCommandEventSubscriber questionEventSubscriber() {
+        return new QuestionCommandEventSubscriber();
     }
 
     @Bean
@@ -129,8 +129,8 @@ public class SurveyBackendConfiguration {
 
     /*************Answer****************************/
     @Bean
-    public AnswerEventSubscriber EventSubscriber() {
-        return new AnswerEventSubscriber();
+    public AnswerCommandEventSubscriber EventSubscriber() {
+        return new AnswerCommandEventSubscriber();
     }
 
     @Bean

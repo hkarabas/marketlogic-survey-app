@@ -17,9 +17,9 @@ import javax.persistence.Id;
 public class Survey {
 
     @Id
-    private  String id;
+    private String id;
     @Column
-    private  String surveyName;
+    private String surveyName;
 
     public Survey(SurveyDto surveyDto) {
         this.surveyName = surveyDto.getSurveyName();

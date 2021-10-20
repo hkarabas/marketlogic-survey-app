@@ -1,16 +1,15 @@
-package org.marketlogic.surveyappcommand.backend.controller;
+package org.marketlogic.surveyappquery.controller;
 
-import org.marketlogic.surveyappcommand.backend.SurveyCommandBackendConfiguration;
+
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-
 @Configuration
-@Import({SurveyCommandBackendConfiguration.class})
+@Import({SurveyQueryWebConfiguration.class})
 @ComponentScan({"org.marketlogic.survey.common",
         "org.marketlogic.survey.hateoas",
-        "org.marketlogic.surveyappcommand.backend.controller"})
-public class SurveyViewWebConfiguration implements WebMvcConfigurer {
+        "org.marketlogic.surveyappquery.controller"})
+public class SurveyQueryWebConfiguration implements WebMvcConfigurer {
 }

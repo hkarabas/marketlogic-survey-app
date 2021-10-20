@@ -11,6 +11,6 @@ import org.marketlogic.survey.model.QuestionDto;
 @AllArgsConstructor
 @Getter
 @Setter
-public class QuestionUpdatedEvent implements  QuestionEvent {
+public class QuestionUpdatedEvent implements QuestionEvent {
     private QuestionDto questionDto;
 }

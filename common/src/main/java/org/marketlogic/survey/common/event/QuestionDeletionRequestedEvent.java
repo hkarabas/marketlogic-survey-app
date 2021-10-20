@@ -13,6 +13,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @EventEntity(entity = "org.marketlogic.surveyappcommand.backend.domain.QuestionBulkDeleteAggregate")
-public class QuestionDeletionRequestedEvent implements Event  {
+public class QuestionDeletionRequestedEvent implements Event {
     private String questionID;
 }

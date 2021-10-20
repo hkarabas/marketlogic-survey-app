@@ -32,6 +32,6 @@ public class UserSurveyAnswer {
         this.surveyId = userSurveyAnswerDto.getSurveyId();
         this.answerId = userSurveyAnswerDto.getAnswerId();
         this.userId = userSurveyAnswerDto.getUserId();
-   }
+    }
 
 }
